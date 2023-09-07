@@ -9,8 +9,9 @@ import { HeaderService } from '../Services/header.service'
 export class HeaderComponent implements OnInit {
 
   name: string = "Jorge";
-  title: string = "Frontend Developer";
-  objetive: string = "I want to be a great developer";
+  title: string = "Data analyst";
+  objective: string = "I want to be a great developer";
+
   photo: string = "aquí va una imagen";
   email: string = "jorgeaveraf@gmail.com";
   phone: string = "272 238 7763";
@@ -25,7 +26,8 @@ export class HeaderComponent implements OnInit {
 
       this.name = data.name;
       this.title = data.title;
-      this.objetive = data.objective;
+
+      this.objective = data.objective;
       this.photo = data.photo;
       this.email = data.email;
       this.phone = data.phone;
