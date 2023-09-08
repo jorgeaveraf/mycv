@@ -1,0 +1,44 @@
+/* Estilo del cuerpo de la página */
+body {
+    background-color: #f2f2f2;
+    color: #333;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+  }
+  
+  /* Estilo de encabezados */
+  h1, h2, h3 {
+    color: #444;
+  }
+  
+  /* Espaciado entre elementos */
+  ul, ol, p {
+    margin-bottom: 10px;
+  }
+  
+  /* Diseño de cajas con sombras sutiles */
+  .box {
+    border: 1px solid #ddd;
+    padding: 20px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Botones y enlaces */
+  button, .btn {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  a {
+    color: #0066cc;
+    text-decoration: none;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  }
+  
