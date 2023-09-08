@@ -1,13 +1,13 @@
 import { Component } from '@angular/core';
 import { WorkService } from '../Services/work.service';
 
-
 @Component({
   selector: 'app-work-experience',
   templateUrl: './work-experience.component.html',
   styleUrls: ['./work-experience.component.css']
 })
 export class WorkExperienceComponent {
+
   company: string = "SIP";
   Sdate: string = "jul 2021";
   Edate: string = "currently";
@@ -15,25 +15,26 @@ export class WorkExperienceComponent {
   city: string = "Orizaba";
   country: string = "Mexico";
   accomplishments: string = "some text";
-  
+
+
+
+  workExperience: any[] = [];
 
   constructor(private workService: WorkService) { }
 
   ngOnInit(): void {
     this.workService.getHeader().subscribe((data: any) => {
-      console.log(data);
-
-      this.role = data.puesto;
-      this.company = data.empresa;
-      this.Sdate = data.fecha_inicio;
-      this.Edate = data.fecha_fin;
-      this.city = data.ciudad;
-      this.country = data.pais;
-      this.accomplishments = data.logros;
-      
-    }
-    );
+      this.workExperience = data.map((item: any) => {
+        return {
+          Sdate: `${item.fecha_inicio} - ${item.fecha_fin}`,
+          city: `${item.ciudad}, ${item.pais}`,
+          role: item.puesto,
+          company: item.empresa,
+          accomplishments: item.logros
+        };
+      });
+    });
   }
-
 }
+
 
