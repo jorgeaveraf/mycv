@@ -17,7 +17,6 @@ export class WorkExperienceComponent implements OnInit{
   accomplishments: string = "some text";
 
 
-
   workExperience: any[] = [];
 
   constructor(private workService: WorkService) { }
