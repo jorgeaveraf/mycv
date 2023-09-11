@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { WorkService } from '../Services/work.service';
 
 @Component({
@@ -6,7 +6,7 @@ import { WorkService } from '../Services/work.service';
   templateUrl: './work-experience.component.html',
   styleUrls: ['./work-experience.component.css']
 })
-export class WorkExperienceComponent {
+export class WorkExperienceComponent implements OnInit{
 
   company: string = "SIP";
   Sdate: string = "jul 2021";
