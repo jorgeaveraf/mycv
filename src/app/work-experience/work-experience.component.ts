@@ -8,7 +8,6 @@ import { WorkService } from '../Services/work.service';
 })
 export class WorkExperienceComponent {
 
-
   company: string = "SIP";
   Sdate: string = "jul 2021";
   Edate: string = "currently";
@@ -36,5 +35,6 @@ export class WorkExperienceComponent {
       });
     });
   }
+
 
 }
