@@ -7,6 +7,7 @@ import { WorkService } from '../Services/work.service';
   styleUrls: ['./work-experience.component.css']
 })
 export class WorkExperienceComponent {
+
   company: string = "SIP";
   Sdate: string = "jul 2021";
   Edate: string = "currently";
@@ -14,8 +15,6 @@ export class WorkExperienceComponent {
   city: string = "Orizaba";
   country: string = "Mexico";
   accomplishments: string = "some text";
-  
-
 
 
 
@@ -36,4 +35,6 @@ export class WorkExperienceComponent {
       });
     });
   }
+
+
 }
