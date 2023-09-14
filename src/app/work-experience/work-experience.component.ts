@@ -8,6 +8,15 @@ import { WorkService } from '../Services/work.service';
 })
 export class WorkExperienceComponent {
 
+  company: string = "SIP";
+  Sdate: string = "jul 2021";
+  Edate: string = "currently";
+  role: string = "data analyst";
+  city: string = "Orizaba";
+  country: string = "Mexico";
+  accomplishments: string = "some text";
+
+
 
   workExperience: any[] = [];
 
