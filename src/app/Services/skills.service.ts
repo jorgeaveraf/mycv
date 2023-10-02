@@ -8,7 +8,7 @@ import { BehaviorSubject } from 'rxjs';
 })
 export class SkillsService {
 
-  apiURL = 'http://localhost:8080/skills';
+  apiURL = 'https://api-cv-service-jorgeaveraf.cloud.okteto.net/skills';
   constructor(private http: HttpClient) { }
 
   httpOptions = {
