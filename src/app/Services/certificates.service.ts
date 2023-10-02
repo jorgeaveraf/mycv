@@ -9,7 +9,7 @@ export class CertificationService {
 
 
   
-  apiURL = 'http://localhost:8080/certificates';
+  apiURL = 'https://api-cv-service-jorgeaveraf.cloud.okteto.net/certificates';
   constructor(private http: HttpClient) { }
 
   httpOptions = {
