@@ -8,7 +8,7 @@ import { BehaviorSubject } from 'rxjs';
   providedIn: 'root'
 })
 export class WorkService {
-  apiURL = 'http://localhost:8080/work';
+  apiURL = 'https://api-cv-service-jorgeaveraf.cloud.okteto.net/work';
   constructor(private http: HttpClient) { }
 
   httpOptions = {
