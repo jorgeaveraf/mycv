@@ -8,6 +8,7 @@ import { retry, catchError } from 'rxjs/operators';
 export class InterestsService {
 
   apiURL = 'https://api-cv-service-jorgeaveraf.cloud.okteto.net/interests';
+
   constructor(private http: HttpClient) { }
 
   httpOptions = {
