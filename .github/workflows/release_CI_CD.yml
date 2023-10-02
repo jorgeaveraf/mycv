@@ -21,11 +21,11 @@ jobs:
       - name: make .env 
         uses: SpicyPizza/create-envfile@v1.3
         with:
-          envkey_NG_APP_KEY : ${{ secrets.mycv_KEY }}
+          envkey_NG_APP_KEY : ${{ secrets.my-cv_KEY }}
           file_name: .env
           fail_on_empty: false
           
-      - name: build angular, output in dist/mycv
+      - name: build angular, output in dist/my-cv
         run: |
           CI=false npm run build
           
@@ -39,7 +39,7 @@ jobs:
           
       - name: cp angular build to container
         run: |
-          docker cp dist/mycv/.  serving_base:/usr/local/apache2/htdocs
+          docker cp dist/my-cv/.  serving_base:/usr/local/apache2/htdocs
           
       - name: Build the custom Docker image
         run: docker commit --change "ENV MODEL_NAME ${{secrets.MODEL_NAME}}" serving_base ${{secrets.DOCKER_USER}}/${{secrets.MODEL_NAME}}:${{github.sha}}
